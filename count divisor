@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long int ll;
+typedef unsigned long long int  llu;
+
+set<ll>s;
+void divisor(ll n){
+    for(ll i=0;i*i<=n;i++){
+        if(n%i==0){
+            s.insert(i);
+            ll x=n/i;
+            s.insert(x);
+        }
+    }
+    
+}
+
+int main()
+{
+   ll a,b;
+   cin>>a>>b;
+   divisor(a);
+   vector<ll>v;
+   v.assign(s.begin(),s.end());
+   if(b>v.size())cout<<"-1"<<endl;
+   else cout<<v[b-1]<<endl;
+   
+
+    return 0;
+}
