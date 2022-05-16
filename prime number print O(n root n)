@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define m 100000001
+
+bool isprime(int n){
+if(n<2)return false;
+for(long long i=2;i*i<=n;i++){
+    if(n%i==0) return false;
+}
+return true;
+}
+
+int main(){
+    int a;
+    int x,y;
+    cin>>a;
+    while(a--){
+
+        cin>>x>>y;
+         for(int i=x;i<=y;i++){
+        if(isprime(i)==true){
+            cout<<i<<endl;
+        }
+    }
+    }
+
+	return 0;
+}
